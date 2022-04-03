@@ -1,0 +1,75 @@
+body {
+    background-color: sandybrown;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.center-container {
+    position: relative;
+    background-color: whitesmoke;
+    border: 2px solid chocolate;
+    height: 96vh;
+    width: 90vw;
+    inset: 2vh 5vw 2vh 5vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: repeat(5, auto) / repeat(3, auto);
+    grid-template-areas: 
+        "img img img"
+        "header header header"
+        "main1 main1 main1"
+        "main2 . main3"
+        "footer footer footer"
+        ;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    grid-area: img;
+}
+
+header {
+    margin: 5%;
+    font-size: 20px;
+    grid-area: header;
+}
+
+main {
+    margin: 5%;
+}
+
+.main1 {
+    grid-area: main1;
+}
+
+.main2 {
+    font-weight: bold;
+    grid-area: main2;
+    justify-content: end;
+}
+
+.main3 {
+    color: yellowgreen;
+    grid-area: main3;
+    justify-content: end;
+}
+
+footer {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5%;
+    background-color: yellowgreen;
+    border: 1px solid yellowgreen;
+    color: whitesmoke;
+
+    display: grid;
+    grid-area: footer;
+    justify-content: center;
+    align-content: center;
+}
+

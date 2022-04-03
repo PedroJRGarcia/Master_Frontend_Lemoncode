@@ -1,0 +1,24 @@
+{
+  "name": "master_frontend_lemoncode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroJRGarcia/Master_Frontend_Lemoncode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroJRGarcia/Master_Frontend_Lemoncode/issues"
+  },
+  "homepage": "https://github.com/PedroJRGarcia/Master_Frontend_Lemoncode#readme",
+  "devDependencies": {
+    "parcel": "^2.3.2",
+    "rimraf": "^3.0.2"
+  }
+}

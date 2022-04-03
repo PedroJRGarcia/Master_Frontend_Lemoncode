@@ -1,0 +1,29 @@
+.flex-container div{
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.base {
+    background-color: red;
+}
+
+.important {
+    background-color: darkred;
+}
+
+.warning {
+    background-color: lightcoral;
+}
+
+.first {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+.second {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container-3 {
+    box-shadow: -1em 1em 1em black;
+}

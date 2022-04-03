@@ -1,0 +1,29 @@
+.flex-container div{
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.base {
+    background-color: blue;
+}
+
+.important {
+    background-color: darkblue;
+}
+
+.warning {
+    background-color: skyblue;
+}
+
+.first {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.second {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container-3 {
+    box-shadow: 1em 1em 1em black;
+}

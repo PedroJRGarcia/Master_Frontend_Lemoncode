@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    border: 10px solid white;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 150%;
+    margin-bottom: 2%;
+}
+
+.flex-container {
+    background-color: darkcyan;
+    color: whitesmoke;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-container div:hover {
+    cursor: pointer;
+    background-color: darkslategray;
+    color: whitesmoke;
+}
+
+.box {
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 400px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+    }
+}
