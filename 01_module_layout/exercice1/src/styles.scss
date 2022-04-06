@@ -13,95 +13,45 @@ body div {
     gap: 1%;
 }
 
+@mixin colourPalette ($colour) {
+    .darken-4 {
+        background-color: darken($colour, 15%);
+    }
+    .darken-3 {
+        background-color: darken($colour, 12%);
+    }
+    .darken-2 {
+        background-color: darken($colour, 8%);
+    }
+    .darken-1 {
+        background-color: darken($colour, 5%);
+    }
+    .lighten-1 {
+        background-color: lighten($colour, 10%);
+    }
+    .lighten-2 {
+        background-color: lighten($colour, 15%);
+    }
+    .lighten-3 {
+        background-color: lighten($colour, 20%);
+    }
+    .lighten-4 {
+        background-color: lighten($colour, 30%);
+    }
+    .base-color {
+        background-color: $colour;
+        color: white;
+    }
+}
+
 .container-1 {
-        .darken-4 {
-            background-color: darken($base, 15%);
-        }
-        .darken-3 {
-            background-color: darken($base, 12%);
-        }
-        .darken-2 {
-            background-color: darken($base, 8%);
-        }
-        .darken-1 {
-            background-color: darken($base, 5%);
-        }
-        .lighten-1 {
-            background-color: lighten($base, 10%);
-        }
-        .lighten-2 {
-            background-color: lighten($base, 15%);
-        }
-        .lighten-3 {
-            background-color: lighten($base, 20%);
-        }
-        .lighten-4 {
-            background-color: lighten($base, 30%);
-        }
-        .base-color {
-            background-color: $base;
-            color: white;
-        }
+    @include colourPalette($base);
 }
 
 .container-2 {
-    .darken-4 {
-        background-color: darken($base2, 15%);
-    }
-    .darken-3 {
-        background-color: darken($base2, 12%);
-    }
-    .darken-2 {
-        background-color: darken($base2, 8%);
-    }
-    .darken-1 {
-        background-color: darken($base2, 5%);
-    }
-    .lighten-1 {
-        background-color: lighten($base2, 10%);
-    }
-    .lighten-2 {
-        background-color: lighten($base2, 15%);
-    }
-    .lighten-3 {
-        background-color: lighten($base2, 20%);
-    }
-    .lighten-4 {
-        background-color: lighten($base2, 30%);
-    }
-    .base-color {
-        background-color: $base2;
-        color: white;
-    }
+    @include colourPalette($base2);
 }
 
 .container-3 {
-    .darken-4 {
-        background-color: darken($base3, 15%);
-    }
-    .darken-3 {
-        background-color: darken($base3, 12%);
-    }
-    .darken-2 {
-        background-color: darken($base3, 8%);
-    }
-    .darken-1 {
-        background-color: darken($base3, 5%);
-    }
-    .lighten-1 {
-        background-color: lighten($base3, 10%);
-    }
-    .lighten-2 {
-        background-color: lighten($base3, 20%);
-    }
-    .lighten-3 {
-        background-color: lighten($base3, 40%);
-    }
-    .lighten-4 {
-        background-color: lighten($base3, 50%);
-    }
-    .base-color {
-        background-color: $base3;
-        color: white;
-    }
+    @include colourPalette($base3);
 }

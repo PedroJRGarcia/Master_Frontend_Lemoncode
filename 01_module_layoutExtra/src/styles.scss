@@ -1,0 +1,93 @@
+$background1: #E6E8E9;
+$background2: #DAE90F;
+$background3: #6B7116;
+$background4: #E2E5B5;
+$text-border: #505354;
+$text: white;
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    .toolbar {
+        background-color: $background1;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+    .page-title {
+        background-color: $background2;
+        color: $text;
+        font-size: 150%;
+        padding: 1rem;
+    }
+}
+
+.page-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    position: sticky;
+    background-color: $background3;
+    .menu-title {
+        color: $text;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    ul {
+        background-color: $background4;
+        color: $text-border;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+            padding: 0.25rem;
+            border: 1px solid $background1;
+        }
+    }
+}
+
+main {
+    background-color: $background1;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    .list {
+        display: grid;
+        gap: 1rem;
+    
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-self: center;
+        align-content: center;
+    }
+
+    div.list > div {
+        padding: 1rem;
+        border: 2px solid $text-border;
+        border-radius: 5px;
+        background-color: $text;
+        color: $text-border;
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 45px;
+        }
+    }
+}
+
+footer {
+    background-color: $background4;
+    color: $text-border;
+    padding: 0.5rem;
+}

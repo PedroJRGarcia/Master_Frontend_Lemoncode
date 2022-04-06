@@ -1,0 +1,82 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+header .toolbar {
+  background-color: #E6E8E9;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+header .page-title {
+  background-color: #DAE90F;
+  color: white;
+  font-size: 150%;
+  padding: 1rem;
+}
+
+.page-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  position: sticky;
+  background-color: #6B7116;
+}
+nav .menu-title {
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  background-color: #E2E5B5;
+  color: #505354;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+nav ul li {
+  padding: 0.25rem;
+  border: 1px solid #E6E8E9;
+}
+
+main {
+  background-color: #E6E8E9;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main .list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-self: center;
+  align-content: center;
+}
+main div.list > div {
+  padding: 1rem;
+  border: 2px solid #505354;
+  border-radius: 5px;
+  background-color: white;
+  color: #505354;
+  display: flex;
+  justify-content: center;
+}
+main div.list > div img {
+  border-radius: 45px;
+}
+
+footer {
+  background-color: #E2E5B5;
+  color: #505354;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=/styles.164d45a1.css.map */
