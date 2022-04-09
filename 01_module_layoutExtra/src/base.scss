@@ -25,9 +25,11 @@ header {
 }
 
 nav {
-    position: sticky;
-    top: 0px;
     background-color: $background3;
+    .menu-container {
+        position: sticky;
+        top: 0px;
+    }
     .menu-title {
         color: $text;
         text-transform: uppercase;

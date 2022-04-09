@@ -23,9 +23,11 @@ header .page-title {
 }
 
 nav {
+  background-color: #6B7116;
+}
+nav .menu-container {
   position: sticky;
   top: 0px;
-  background-color: #6B7116;
 }
 nav .menu-title {
   color: white;
@@ -57,10 +59,9 @@ main {
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
 }
 main .card {
-  margin: 2%;
+  margin: 3% 1%;
 }
 main .list {
   display: grid;
@@ -92,8 +93,32 @@ main div.list > div img {
   }
 }
 @media screen and (max-width: 768px) {
+  header .toolbar {
+    display: none;
+  }
+
+  nav .menu-title {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+  }
+
+  main {
+    flex-direction: column;
+  }
   main .list {
+    margin: 2%;
+    gap: 0.2rem;
     grid-template-columns: repeat(1, 1fr);
+  }
+  main .list .card {
+    margin: 0% 2%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  main .list img {
+    margin: 0% 5%;
   }
 }
 
