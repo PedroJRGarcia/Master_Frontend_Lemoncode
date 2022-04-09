@@ -50,6 +50,45 @@ nav {
     }
 }
 
+main {
+    background-color: $background1;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+
+    .card {
+        margin: 3% 1%;
+    }
+
+    .list {
+        display: grid;
+        gap: 1rem;
+    
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        align-content: center;
+    }
+
+    div.list > div {
+        padding: 1rem;
+        border: 2px solid $text-border;
+        border-radius: 5px;
+        background-color: $text;
+        color: $text-border;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        
+        img {
+            border-radius: 45px;
+        }
+    }
+}
+
 footer {
     background-color: $background4;
     color: $text-border;

@@ -48,12 +48,6 @@ nav ul li {
   border: 1px solid #E6E8E9;
 }
 
-footer {
-  background-color: #E2E5B5;
-  color: #505354;
-  padding: 0.5rem;
-}
-
 main {
   background-color: #E6E8E9;
   width: 100vw;
@@ -85,6 +79,12 @@ main div.list > div {
 }
 main div.list > div img {
   border-radius: 45px;
+}
+
+footer {
+  background-color: #E2E5B5;
+  color: #505354;
+  padding: 0.5rem;
 }
 
 @media screen and (max-width: 1000px) {
