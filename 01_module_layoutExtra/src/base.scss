@@ -19,17 +19,18 @@ header {
 }
 
 .page-container {
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
 }
 
 nav {
     background-color: $background3;
+
     .menu-container {
         position: sticky;
         top: 0px;
     }
+
     .menu-title {
         color: $text;
         text-transform: uppercase;
@@ -37,6 +38,7 @@ nav {
         display: flex;
         justify-content: center;
     }
+    
     ul {
         background-color: $background4;
         color: $text-border;
