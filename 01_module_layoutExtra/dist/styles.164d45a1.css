@@ -111,15 +111,15 @@ footer {
     display: none;
   }
   nav ul {
-    padding: 1rem;
+    font-size: 150%;
     display: flex;
     gap: 5rem;
   }
-
   main {
     flex-direction: column;
   }
   main .list {
+    font-size: 150%;
     margin: 2%;
     gap: 0.2rem;
     grid-template-columns: repeat(1, 1fr);
