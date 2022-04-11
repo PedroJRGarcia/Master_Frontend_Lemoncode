@@ -48,6 +48,7 @@ nav {
         li {
             padding: 0.25rem;
             border: 1px solid $background1;
+            margin-right: 1%;
         }
     }
 }
@@ -60,6 +61,9 @@ main {
 
     .card {
         margin: 3% 1%;
+        .member-name {
+            text-align: center;
+        }
     }
 
     .list {
