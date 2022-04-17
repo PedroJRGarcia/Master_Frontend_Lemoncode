@@ -1,5 +1,58 @@
 @import "variables.scss";
+@import "base.scss";
 
-body {
-    background-color: $background;
+@media screen and (min-width: 1280px) {
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    main {
+        .first, 
+        .second {
+            flex-wrap: wrap;
+        }
+
+        .top-item {
+            min-width: 225px;
+        }
+
+        .item {
+            min-width: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    header {
+        position: sticky;
+        top: 0;
+
+        .platform-title {
+            display: none;
+        }
+    }
+
+    main {
+        .top {
+            flex-wrap: wrap-reverse;
+        }
+
+        .first, 
+        .second {
+            flex-wrap: wrap;
+        }
+
+        .top-item {
+            min-width: 225px;
+        }
+
+        .item {
+            min-width: 250px;
+        }
+
+        .item:hover {
+            margin: 0% 7%;
+        }
+    }
 }
