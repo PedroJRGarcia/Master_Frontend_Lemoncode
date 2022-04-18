@@ -40,14 +40,15 @@ nav {
     }
     
     ul {
-        gap: 5%;
-        background-color: $background4;
-        color: $text-border;
+        background-color: $background3;
+        // gap: 5%;
+        // color: $text-border;
         list-style-type: none;
-        padding: 0px;
-        margin: 0px;
+        // padding: 0px;
+        // margin: 0px;
         li {
-            padding: 0.25rem;
+            background-color: $background4;
+            // padding: 0.25rem;
             border: 1px solid $background1;
         }
     }

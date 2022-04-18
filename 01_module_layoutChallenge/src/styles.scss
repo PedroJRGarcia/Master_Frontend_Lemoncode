@@ -8,17 +8,15 @@
     }
 
     main {
+        #top-text::after {
+            content: " 5 ";
+            font-size: 140%;
+            font-weight: bold;
+        }
+
         .first, 
         .second {
             flex-wrap: wrap;
-        }
-
-        .top-item {
-            min-width: 225px;
-        }
-
-        .item {
-            min-width: 250px;
         }
     }
 }
@@ -34,25 +32,22 @@
     }
 
     main {
-        .top {
-            flex-wrap: wrap-reverse;
+        #top-text::after {
+            content: " 3 ";
+            font-size: 140%;
+            font-weight: bold;
         }
 
+        .top {
+            min-width: 300%;
+        }
         .first, 
         .second {
             flex-wrap: wrap;
         }
 
-        .top-item {
-            min-width: 225px;
-        }
-
         .item {
-            min-width: 250px;
-        }
-
-        .item:hover {
-            margin: 0% 7%;
+            pointer-events: none;
         }
     }
 }

@@ -23,7 +23,7 @@
         top: 0;
         
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         padding: 1rem;
 
         .menu-title {
@@ -34,6 +34,10 @@
             font-size: 150%;
             display: flex;
             gap: 5rem;
+            li {
+                flex: 1;
+                padding: 0.25rem;
+            }
         }
     }
 

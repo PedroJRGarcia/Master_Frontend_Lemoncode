@@ -19,7 +19,10 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
+    .platform-title {
+        font-size: 150%;
+    }
 }
 
 .header-buttons {
@@ -39,7 +42,7 @@ header {
 
 main {
     .section-title {
-        margin: 2% 0% 0.3% 1%;
+        margin: 2% 0% .3% 1%;
     }
 
     .top {
@@ -47,6 +50,10 @@ main {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+
+        .top-item {
+            min-width: 225px;
+        }
     }
 
     .first {
@@ -60,8 +67,9 @@ main {
     }
 
     .item {
-        margin: 0% 0.1%;
+        margin: 0% .1%;
         transition: transform .2s;
+        min-width: 250px;
     }
 
     .item:hover {
