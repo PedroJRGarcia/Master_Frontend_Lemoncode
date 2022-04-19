@@ -58,7 +58,9 @@ main {
 
     .first {
         margin-left: 1%;
+        min-width: 250px;
         display: flex;
+        object-fit: cover;
     }
 
     .second {
