@@ -32,14 +32,21 @@
     }
 
     main {
-        #top-text::after {
-            content: " 3 ";
-            font-size: 140%;
-            font-weight: bold;
+        .section-title {
+            font-size: 150%;
+            #top-text::after {
+                content: " 3 ";
+                font-size: 140%;
+                font-weight: bold;
+            }
         }
 
         .top {
-            min-width: 300%;
+            flex-wrap: wrap-reverse;
+            div:nth-child(1),
+            div:nth-child(2) {
+                display: none;
+            }
         }
         .first, 
         .second {
