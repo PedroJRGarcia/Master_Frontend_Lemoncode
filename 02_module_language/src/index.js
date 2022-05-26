@@ -45,7 +45,7 @@ merge(beers, cars);
 // Read Books:
 
 function isBookRead (books, titleToSearch) {
-    let matchTitle = books.find(book => book.title === titleToSearch);
+    const matchTitle = books.find(book => book.title === titleToSearch);
 
     if(matchTitle !== undefined) {
         console.log(matchTitle.isRead ? 
