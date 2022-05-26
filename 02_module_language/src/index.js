@@ -2,10 +2,10 @@ const persons = ["Robert", "Jack", "Peter"];
 const num = [2, 4, 6];
 const random = [true, NaN, null];
 
-const head = ([first, ]) => first;
+const head = ([ first ]) => first;
 console.log("First element is: " + head(persons));
 
-const tail = ([first, ...array]) => array;
+const tail = ([, ...array]) => array;
 console.log("All but first: " + tail(num));
 
 const init = arr => console.log("All but last one: " + arr.slice(0, -1));
@@ -44,3 +44,31 @@ merge(beers, cars);
 
 // Read Books:
 
+function isBookRead (books, titleToSearch) {
+    let matchTitle = books.find(book => book.title === titleToSearch);
+
+    if(matchTitle !== undefined) {
+        console.log(matchTitle.isRead ? 
+        "Yes, the book was read": 
+        "No, the book wasn't read");
+    } else {
+        console.log("Book NOT found");
+    }
+
+    return matchTitle;
+}
+
+const books = [
+    { title: "Troya", isRead: false },
+    { title: "Agriculture", isRead: true },
+    { title: "Yeast", isRead: false },
+];
+
+console.log(isBookRead(books, "Agriculture"));
+
+//Optional w Typescript
+
+
+
+
+// Slot Machine:
