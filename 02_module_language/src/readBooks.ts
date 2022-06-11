@@ -1,4 +1,9 @@
-const books = [
+interface Books {
+    title: string;
+    isRead: boolean;
+}
+
+const books: Books[] = [
     { title: "Troya", isRead: false },
     { title: "Agriculture", isRead: true },
     { title: "Yeast", isRead: true },
