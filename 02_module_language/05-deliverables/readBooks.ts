@@ -1,6 +1,7 @@
 interface Books {
     title: string;
     isRead: boolean;
+    //[key: string]: any;  --> index signature
 }
 
 const books: Books[] = [
