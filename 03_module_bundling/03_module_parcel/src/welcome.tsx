@@ -1,25 +1,27 @@
 import React from "react";
-import * as classes from "./welcome.styles.scss";
-import * as styles from "./my.styles.scss";
+import "./welcome.styles.scss";
+import "./my.styles.scss";
 import logo from "./content/logo_2.png";
 import neipa from "./content/neipa.jpeg";
 
 export const Welcome: React.FC = () => {
     return (
     <div>
-        <h1 className={styles.background}>Hello World from React DOM</h1>
-        <div className="card" style={{width: 370}}>
+        <div className="container" style={{width: 370}}>
+        <h1 className="subtitle">Hello World from React DOM</h1>
             <div className="card-body">
-                <h5 className="card-title">React & Typescript</h5>
+                <h5 className="background">React & Typescript</h5>
                 <img src={logo} alt="lemoncodelogo" />
-                <p className={classes.resultBackground}>
+                <p className="result-background">
                     Some quick example text to build on the card title and make up the 
                     bulk of the card's content.
                 </p>
                 <img src={neipa} alt="neipalogo" />
-                <a href="#" className="btn btn-primary">
-                Go somewhere
-                </a>
+                <div>
+                    <a href="#" className="button">
+                    Click here
+                    </a>
+                </div>
             </div>
         </div>
     </div>

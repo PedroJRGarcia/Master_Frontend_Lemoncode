@@ -1,5 +1,12 @@
-$back-colour: royalblue;
+$background-color: orange;
 
-.background {
-    background-color: $back-colour;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+.result-background {
+    background-color: $background-color;
+    padding: 15px;
+}
 }
