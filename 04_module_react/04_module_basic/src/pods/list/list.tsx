@@ -46,11 +46,13 @@ export const ListPage: React.FC = () => {
         <span className={classes.header}>Id</span>
         <span className={classes.header}>Name</span>
         {members[page - 1]?.map((member) => (
-          <div className={classes.row} key={member.id}>
-            <img src={member.avatar_url} width={40} />
+          <React.Fragment key={member.id}>
+            <span>
+            <img src={member.avatar_url} width={ 80 } />
+            </span>
             <span>{member.id}</span>
             <Link to={`/detail/${member.login}`}>{member.login}</Link>
-          </div>
+          </React.Fragment>
         ))}
       </div>
       <div>
