@@ -20,14 +20,14 @@ export const ListPage: React.FC = () => {
 
   const handleSearch = (organizationName: string) => {
     fetch(`https://api.github.com/orgs/${organizationName}/members`)
-    .then((response) => (response.json()))
-    .then((json) => {
-      setMembers(chunk(json, 5))
-    });
+      .then((response) => response.json())
+      .then((json) => {
+        setMembers(chunk(json, 5));
+      });
   };
 
   const handleChange = (event, value) => {
-    setPage(value)
+    setPage(value);
   };
 
   React.useEffect(() => {
@@ -48,7 +48,7 @@ export const ListPage: React.FC = () => {
         <span className={classes.header}>Name</span>
         {members[page - 1]?.map((member) => (
           <div className={classes.row} key={member.id}>
-            <img src={member.avatar_url} width={ 40 } />
+            <img src={member.avatar_url} width={40} />
             <span>{member.id}</span>
             <Link to={`/detail/${member.login}`}>{member.login}</Link>
           </div>
@@ -56,7 +56,7 @@ export const ListPage: React.FC = () => {
       </div>
       <div>
         <Pagination
-          count={ (members.length) }
+          count={members.length}
           page={page}
           onChange={handleChange}
           variant="outlined"
