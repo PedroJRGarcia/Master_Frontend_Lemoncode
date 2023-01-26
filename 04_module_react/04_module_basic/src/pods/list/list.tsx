@@ -5,7 +5,6 @@ import { OrganizationSearch } from "../../organization-search";
 import classes from "./list.styles.css";
 import Pagination from "@mui/material/Pagination";
 import { chunk } from "lodash";
-// import { ReactPagination } from "./pagination";
 
 export interface MemberEntity {
   id: string;
