@@ -14,22 +14,20 @@ export interface MemberEntity {
 }
 
 export const ListPage: React.FC = () => {
-  const [members, setMembers] = React.useState<MemberEntity[]>([]);
+  const [members, setMembers] = React.useState<MemberEntity[][]>([]);
   const { orgName, setOrgName } = React.useContext(MyContext);
-  const [splitMembers, setSplitMembers] = React.useState([]);
   const [page, setPage] = React.useState(1);
 
   const handleSearch = (organizationName: string) => {
     fetch(`https://api.github.com/orgs/${organizationName}/members`)
     .then((response) => (response.json()))
     .then((json) => {
-      setMembers(json)
-      setSplitMembers(chunk(json, 5))
+      setMembers(chunk(json, 5))
     });
   };
 
   const handleChange = (event, value) => {
-  
+    setPage(value)
   };
 
   React.useEffect(() => {
@@ -48,7 +46,7 @@ export const ListPage: React.FC = () => {
         <span className={classes.header}>Avatar</span>
         <span className={classes.header}>Id</span>
         <span className={classes.header}>Name</span>
-        {members.map((member) => (
+        {members[page - 1]?.map((member) => (
           <div className={classes.row} key={member.id}>
             <img src={member.avatar_url} width={ 40 } />
             <span>{member.id}</span>
@@ -58,7 +56,7 @@ export const ListPage: React.FC = () => {
       </div>
       <div>
         <Pagination
-          count={Math.round( (members.length/5) + 1 )}
+          count={ (members.length) }
           page={page}
           onChange={handleChange}
           variant="outlined"
