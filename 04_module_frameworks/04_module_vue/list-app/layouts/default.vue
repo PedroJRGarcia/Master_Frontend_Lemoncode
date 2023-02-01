@@ -1,7 +1,7 @@
 <template>
   <div>
     <main>
-      <MemberList />
+      <slot />
     </main>
   </div>
 </template>

@@ -4,34 +4,39 @@
     <div class="username">
       <label>Username: </label>
       <input 
-      v-model="member.username"
       type="text"
       class="input"
       placeholder="username"
+      v-model="loginForm.username"
       />
     </div>
     <div class="password">
       <label>Password: </label>
       <input 
-      v-model="member.password"
       type="text" 
       class="input"
       placeholder="password"
+      v-model="loginForm.password"
       />
     </div>
-    <Button @click.prevent="login" class="button"> Login </Button>
+    <button @click.prevent="loginHandler" class="button"> Login </button>
   </form>
 </template>
 
 <script lang="ts" setup>
-const member = ref({
+
+let loginForm = {
   username: "",
   password: "",
-});
-
-const login = async () => {
-  // TODO send user Data to the login endpoint and redirect if  successful
 };
+
+const loginHandler = () => {
+if (loginForm.username === "admin" && loginForm.password === "test") {
+      navigateTo("/member");
+    } else {
+      alert("User / password not valid, psst... admin / test");
+    }
+}
 </script>
 
 <style lang="scss" scoped>

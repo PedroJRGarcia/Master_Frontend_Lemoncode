@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Login />
-  </div>
+  <MemberList />
 </template>
 
 <script setup lang="ts">

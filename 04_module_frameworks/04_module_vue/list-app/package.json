@@ -12,6 +12,7 @@
     "sass": "^1.57.1"
   },
   "dependencies": {
+    "@nuxtjs-alt/auth": "^2.1.7",
     "@nuxtjs/auth": "^4.9.1",
     "@pinia/nuxt": "^0.4.6",
     "pinia": "^2.0.29",

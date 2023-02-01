@@ -1,10 +1,10 @@
 <template>
-  <div>List Page</div>
-  <input type="text" />
+  <h3>List Page</h3>
+  <OrgSearch />
   <button>Search!</button>
   <ul class="member-list">
     <li v-for="member in list" :key="member.id">
-      <NuxtLink :to="`/member/${member.id}`">
+      <NuxtLink :to="`/member/${member.login}`">
         <div class="grid member-container card">
           <div class="image">
             <span class="grey-text">Avatar: </span>
@@ -28,10 +28,7 @@
 
 <script setup lang="ts">
 import { memberService } from "@/services/members";
-// import useMembersApi from '@/composables/useMembersApi'
-
 const list = await memberService.get();
-// const { list } = await useMembersApi()
 </script>
 
 <style lang="scss" scoped>
