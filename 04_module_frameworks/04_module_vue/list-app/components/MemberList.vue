@@ -26,8 +26,10 @@
 </template>
 
 <script setup lang="ts">
-import { memberService } from "@/services/members";
-const list = await memberService.get();
+const { list, searchHandler } = useMembersApi()
+onMounted(() => {
+  searchHandler()
+})
 </script>
 
 <style lang="scss" scoped>

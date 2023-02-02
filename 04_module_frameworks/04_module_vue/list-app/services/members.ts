@@ -1,9 +1,9 @@
 import { Member } from "~~/types"
 
 export const memberService = {
-  async get() {
+  async get(organization= "lemoncode") {
     const config = useRuntimeConfig()
-    const members = await $fetch<Member[]>('https://api.github.com/orgs/lemoncode/members', {
+    const members = await $fetch<Member[]>(`https://api.github.com/orgs/${organization}/members`, {
       headers: {
         Authorization: `token ${config.public.apiKey}`
       }
