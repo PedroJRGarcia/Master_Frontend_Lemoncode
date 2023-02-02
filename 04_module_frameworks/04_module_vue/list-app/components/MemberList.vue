@@ -1,7 +1,6 @@
 <template>
   <h3>List Page</h3>
   <OrgSearch />
-  <button>Search!</button>
   <ul class="member-list">
     <li v-for="member in list" :key="member.id">
       <NuxtLink :to="`/member/${member.login}`">
