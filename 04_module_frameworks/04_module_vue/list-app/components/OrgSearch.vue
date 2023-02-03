@@ -14,7 +14,7 @@ const props = defineProps<{ companyName: any; handlerClick: any }>();
 
 const { setCompanyName } = useSearchTextStore();
 
-const updateSearchText = (searchText: any) => {
-  setCompanyName(searchText);
+const updateSearchText = (event: any) => {
+  setCompanyName(event.target.value);
 };
 </script>

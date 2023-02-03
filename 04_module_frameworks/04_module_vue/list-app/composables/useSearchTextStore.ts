@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 
 export const useSearchTextStore = defineStore('searchHandler', {
   state: () => ({
-    searchText: '',
+    searchText: 'Lemoncode',
   }),
   getters: {
     companyName: (state: any): string => {
@@ -10,8 +10,8 @@ export const useSearchTextStore = defineStore('searchHandler', {
     }
   },
   actions: {
-    setCompanyName: ( searchText: string) => {
-      this.state.searchText = searchText
+    setCompanyName (searchText: string) {
+      this.searchText = searchText
     }
   },
 })

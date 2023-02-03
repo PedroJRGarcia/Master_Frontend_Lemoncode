@@ -29,17 +29,17 @@
 import { storeToRefs } from 'pinia'; 
 import { memberService } from '~~/services/members';
 
-let list: any = []
+let list: any = ref([])
 
 const searchTextStore = useSearchTextStore();
 const { companyName } = storeToRefs(searchTextStore)
 
-const handlerClick = () => {
-  memberService.get(companyName).then(response => list = response)
+const handlerClick = async () => {
+  list.value = await memberService.get(companyName.value)
 }
 
-onMounted(() => {
-  memberService.get(companyName).then(response => list = response)
+onMounted( async () => {
+  list.value = await memberService.get(companyName.value)
 })
 </script>
 
