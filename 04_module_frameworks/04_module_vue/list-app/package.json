@@ -15,7 +15,7 @@
     "@nuxtjs-alt/auth": "^2.1.7",
     "@nuxtjs/auth": "^4.9.1",
     "@pinia/nuxt": "^0.4.6",
-    "pinia": "^2.0.29",
+    "pinia": "^2.0.30",
     "vue": "^3.2.45"
   }
 }

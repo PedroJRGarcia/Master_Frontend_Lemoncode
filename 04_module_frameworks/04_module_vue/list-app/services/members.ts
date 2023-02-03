@@ -1,7 +1,7 @@
 import { Member } from "~~/types"
 
 export const memberService = {
-  async get(organization= "lemoncode") {
+  async get(organization: any) {
     const config = useRuntimeConfig()
     const members = await $fetch<Member[]>(`https://api.github.com/orgs/${organization}/members`, {
       headers: {

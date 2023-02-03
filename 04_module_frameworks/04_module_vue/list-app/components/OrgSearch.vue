@@ -1,11 +1,20 @@
 <template>
   <h4>Organization search:</h4>
-    <input type="text" placeholder="Lemoncode" v-model="searchText" />
-    <button @click.prevent="searchHandler(searchText)" class="button">Search!</button>
-    
+  <input
+    type="text"
+    placeholder="Search organization..."
+    :value="props.companyName"
+    v-on:change="updateSearchText"
+  />
+  <button @click.prevent="handlerClick" class="button">Search!</button>
 </template>
 
 <script setup lang="ts">
-const { searchText, searchHandler } = useMembersApi()
+const props = defineProps<{ companyName: any; handlerClick: any }>();
 
+const { setCompanyName } = useSearchTextStore();
+
+const updateSearchText = (searchText: any) => {
+  setCompanyName(searchText);
+};
 </script>

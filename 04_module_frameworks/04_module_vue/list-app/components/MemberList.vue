@@ -1,6 +1,6 @@
 <template>
   <h3>List Page</h3>
-  <OrgSearch />
+  <OrgSearch :companyName="companyName" :handlerClick="handlerClick"/>
   <ul class="member-list">
     <li v-for="member in list" :key="member.id">
       <NuxtLink :to="`/member/${member.login}`">
@@ -26,9 +26,20 @@
 </template>
 
 <script setup lang="ts">
-const { list, searchHandler } = useMembersApi()
+import { storeToRefs } from 'pinia'; 
+import { memberService } from '~~/services/members';
+
+let list: any = []
+
+const searchTextStore = useSearchTextStore();
+const { companyName } = storeToRefs(searchTextStore)
+
+const handlerClick = () => {
+  memberService.get(companyName).then(response => list = response)
+}
+
 onMounted(() => {
-  searchHandler()
+  memberService.get(companyName).then(response => list = response)
 })
 </script>
 
