@@ -65,7 +65,6 @@ export const ListPage: React.FC = () => {
           shape="rounded"
         />
       </div>
-      <Link to="/detail">Navigate to detail page</Link>
     </>
   );
 };
