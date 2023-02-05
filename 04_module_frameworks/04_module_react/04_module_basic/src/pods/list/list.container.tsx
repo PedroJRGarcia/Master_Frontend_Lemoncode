@@ -4,14 +4,9 @@ import { routes } from "@/router/routes";
 import { chunk } from "lodash";
 import { MyContext } from "../../my-provider";
 import { OrganizationSearch } from "../../organization-search";
+import { MemberEntity } from "./list.vm"
 import classes from "./list.styles.css";
 import Pagination from "@mui/material/Pagination";
-
-export interface MemberEntity {
-  id: string;
-  login: string;
-  avatar_url: string;
-}
 
 export const ListPage: React.FC = () => {
   const [members, setMembers] = React.useState<MemberEntity[][]>([]);
