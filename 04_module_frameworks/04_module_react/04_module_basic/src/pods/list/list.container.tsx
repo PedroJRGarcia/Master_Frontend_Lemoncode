@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { routes } from "@/router/routes";
+import { chunk } from "lodash";
 import { MyContext } from "../../my-provider";
 import { OrganizationSearch } from "../../organization-search";
 import classes from "./list.styles.css";
 import Pagination from "@mui/material/Pagination";
-import { chunk } from "lodash";
 
 export interface MemberEntity {
   id: string;
@@ -48,10 +49,10 @@ export const ListPage: React.FC = () => {
         {members[page - 1]?.map((member) => (
           <React.Fragment key={member.id}>
             <span>
-            <img src={member.avatar_url} width={ 80 } />
+              <img src={member.avatar_url} width={80} />
             </span>
             <span>{member.id}</span>
-            <Link to={`/detail/${member.login}`}>{member.login}</Link>
+            <Link to={routes.detail(member.login)}>{member.login}</Link>
           </React.Fragment>
         ))}
       </div>

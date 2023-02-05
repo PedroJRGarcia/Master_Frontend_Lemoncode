@@ -1,5 +1,7 @@
 import React from "react";
+import { routes } from "@/router/routes";
 import { Link, useParams } from "react-router-dom";
+import { AppLayout } from "@/layout";
 
 interface MemberDetailEntity {
   id: number;
@@ -18,11 +20,11 @@ export const DetailPage: React.FC = () => {
   React.useEffect(() => {
     fetch(`https://api.github.com/users/${id}`)
       .then((r) => r.json())
-      .then((r) => setMember(r)); //= .then(setMember);
+      .then((r) => setMember(r));
   }, [id]);
 
   return member ? (
-    <>
+    <AppLayout>
       <h2>Detail Page:</h2>
       <p>id: {member.id}</p>
       <p>login: {member.login}</p>
@@ -30,8 +32,8 @@ export const DetailPage: React.FC = () => {
       <p>company: {member.company}</p>
       <p>bio: {member.bio}</p>
       <img src={member.avatar_url} alt="" />
-      <div><Link to="/list">Back to list page</Link></div>
-    </>
+      <div><Link to={routes.list}>Back to list page</Link></div>
+    </AppLayout>
   ) : (
     <div>Loading...</div>
   );
