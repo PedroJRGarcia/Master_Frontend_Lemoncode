@@ -17,12 +17,14 @@
 import { memberService } from "~~/services/members";
 import { Member } from "~~/types";
 
+let member: any = ref({})
+
 const route = useRoute();
 const login = route.params.login as string;
 
-const { data: member } = await useAsyncData<Member>(() =>
-  memberService.getMemberById(login)
-);
+onMounted( async () => {
+  member.value = await memberService.getMemberById(login)
+})
 </script>
 
 <style scoped>
