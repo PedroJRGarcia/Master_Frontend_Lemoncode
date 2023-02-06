@@ -1,7 +1,7 @@
 import React from "react";
 import { chunk } from "lodash";
-import { MemberEntity } from "./list.vm";
-import { List } from "./list.component";
+import { MemberEntity } from "./vm.list";
+import { List } from "./component.list";
 
 export const ListPage: React.FC = () => {
   const [members, setMembers] = React.useState<MemberEntity[][]>([]);

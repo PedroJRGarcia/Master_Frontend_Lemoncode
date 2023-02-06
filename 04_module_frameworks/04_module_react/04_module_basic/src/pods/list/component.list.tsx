@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { routes } from "@/router/routes";
 import { MyContext } from "../../my-provider";
 import { OrganizationSearch } from "../../organization-search";
-import { MemberEntity } from "./list.vm"
-import classes from "./list.styles.css";
+import { MemberEntity } from "./vm.list";
+import classes from "./styles.list.css";
 import Pagination from "@mui/material/Pagination";
+import { IdList } from "./member.list";
 
 interface Props {
   members: MemberEntity[][];
@@ -25,7 +24,6 @@ export const List: React.FC<Props> = (props) => {
     handleSearch(orgName);
   }, []);
 
-
   return (
     <>
       <h2>List page:</h2>
@@ -39,13 +37,7 @@ export const List: React.FC<Props> = (props) => {
         <span className={classes.header}>Id</span>
         <span className={classes.header}>Name</span>
         {members[page - 1]?.map((member) => (
-          <React.Fragment key={member.id}>
-            <span>
-              <img src={member.avatar_url} width={80} />
-            </span>
-            <span>{member.id}</span>
-            <Link to={routes.detail(member.login)}>{member.login}</Link>
-          </React.Fragment>
+          <IdList member={member} />
         ))}
       </div>
       <div>

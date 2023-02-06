@@ -1,7 +1,7 @@
 import React from "react";
 import { routes } from "@/router/routes";
 import { useNavigate } from "react-router-dom";
-import classes from "./login.styles.css";
+import classes from "./styles.login.css";
 import CardActions from "@mui/material/CardActions";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

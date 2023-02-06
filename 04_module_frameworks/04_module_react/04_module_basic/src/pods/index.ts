@@ -1,3 +1,3 @@
-export * from "./login/login.container"
-export * from "./list/list.container"
+export * from "./login/container.login"
+export * from "./list/container.list"
 export * from "./detail/detail"
