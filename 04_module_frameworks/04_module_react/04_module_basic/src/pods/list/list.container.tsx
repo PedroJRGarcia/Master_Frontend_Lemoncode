@@ -16,7 +16,7 @@ export const ListPage: React.FC = () => {
 
   return (
     <>
-      <List members={members} />
+      <List members={members} handleSearch={handleSearch} />
     </>
   );
 };

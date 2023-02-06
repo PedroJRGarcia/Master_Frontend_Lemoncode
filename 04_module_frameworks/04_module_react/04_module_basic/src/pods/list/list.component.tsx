@@ -4,16 +4,16 @@ import { routes } from "@/router/routes";
 import { MyContext } from "../../my-provider";
 import { OrganizationSearch } from "../../organization-search";
 import { MemberEntity } from "./list.vm"
-import { ListPage } from "./list.container"
 import classes from "./list.styles.css";
 import Pagination from "@mui/material/Pagination";
 
 interface Props {
   members: MemberEntity[][];
+  handleSearch: (orgName: string) => void;
 }
 
 export const List: React.FC<Props> = (props) => {
-  const { members } = props;
+  const { members, handleSearch } = props;
   const { orgName, setOrgName } = React.useContext(MyContext);
   const [page, setPage] = React.useState(1);
 
