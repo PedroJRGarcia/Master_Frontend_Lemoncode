@@ -11,7 +11,7 @@ const mapEmployeeSummaryFromApiToVm = (
 const mapEmployeeSummaryListFromApiToVm = (
   employeeSummary: apiModel.EmployeeSummary[]
 ): viewModel.EmployeeSummary[] =>
-  mapToCollection(employeeSummary, es => mapEmployeeSummaryFromApiToVm(es));
+  mapToCollection(employeeSummary, (es) => mapEmployeeSummaryFromApiToVm(es));
 
 export const mapProjectFromApiToVm = (
   project: apiModel.Project
